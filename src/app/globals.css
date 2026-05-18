@@ -69,7 +69,8 @@ button:focus {
 
 /* Responsive Viewport Height utility adjusting for desktop & mobile sticky headers */
 .min-h-viewport {
-  min-height: calc(100vh - 96px);
+  min-height: calc(100vh - 96px); /* Fallback */
+  min-height: calc(100svh - 96px);
 }
 
 @media (min-width: 768px) {
@@ -80,7 +81,8 @@ button:focus {
 
 /* Responsive static height class for background overlays/media */
 .h-viewport {
-  height: calc(100vh - 96px);
+  height: calc(100vh - 96px); /* Fallback */
+  height: calc(100svh - 96px);
 }
 
 @media (min-width: 768px) {

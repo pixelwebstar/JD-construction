@@ -44,9 +44,10 @@ export default function RootLayout({
               muted
               playsInline
               preload="metadata"
+              poster="/hero-poster.jpg"
               className="w-full h-full object-cover transform-gpu will-change-transform"
             >
-              <source src="/hero-bg.webm" type="video/webm" />
+              <source src="/hero-bg-optimized.mp4" type="video/mp4" />
             </video>
           </div>
 
