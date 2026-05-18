@@ -4,16 +4,16 @@ import Link from "next/link";
 export default function Home() {
   const capabilities = [
     {
-      title: "01 / Structural Erection",
-      desc: "Setting heavy steel columns, high-curing concrete structural walls, and deep industrial foundations with zero load margin errors.",
+      title: "01 / Steel & Concrete Erection",
+      desc: "We assemble heavy structural steel frames, cure load-bearing concrete walls, and lay deep industrial foundations with zero margin for error.",
     },
     {
-      title: "02 / Precision Engineering",
-      desc: "Comprehensive structural planning, static and dynamic force distribution simulations, and professional engineer signed-off blueprints.",
+      title: "02 / Structural Blueprint Design",
+      desc: "We analyze force distributions, simulate dynamic loads, and draft certified blueprint sets signed by licensed professional engineers.",
     },
     {
-      title: "03 / Code Auditing & Safety",
-      desc: "Rigorous load-bearing inspections, seismic hazard audits, and building compliance certifications to guarantee durability.",
+      title: "03 / Compliance & Code Audits",
+      desc: "We run thorough structural safety checks, audit column integrity, and certify commercial properties to fully pass municipal codes.",
     },
   ];
 
@@ -21,13 +21,13 @@ export default function Home() {
     {
       title: "Vance Logistics Center",
       metric: "50,000 SQ FT Structure",
-      desc: "Erection of a high-span commercial warehouse facility, featuring a custom portal frame steel structure and heavy concrete foundations.",
+      desc: "We erected a high-span commercial warehouse facility featuring custom portal frame steel structures, concrete floor slabs, and heavy loading bay foundations.",
       href: "/projects#projects-section",
     },
     {
       title: "Steel Foundry Extension",
       metric: "120-Ton Equipment Base",
-      desc: "Pouring of high-density reinforced concrete machine foundations and column strengthening to support heavy foundry presses.",
+      desc: "We engineered and poured high-density concrete machine bases, reinforced surrounding support columns, and modified steel framing to accommodate a 120-ton industrial press.",
       href: "/projects#projects-section",
     },
   ];
@@ -61,13 +61,20 @@ export default function Home() {
               Capabilities
             </span>
             <h2 className="font-space-grotesk text-3xl md:text-5xl font-bold tracking-tight text-slate-900">
-              Structural Contracting Standards
+              Structural Contracting Services
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             {capabilities.map((cap, i) => (
               <div key={i} className="flex flex-col gap-4">
+                {/* Visual Blueprint Schema Placeholder Frame */}
+                <div className="w-full aspect-[16/10] bg-blueprint-grey/50 border border-dashed border-slate-200 rounded-sm mb-6 flex items-center justify-center relative overflow-hidden select-none">
+                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:16px_16px]" />
+                  <span className="font-space-grotesk text-[9px] uppercase tracking-widest text-steel-slate/30 font-bold border border-slate-200/50 px-3 py-1.5 bg-slate-50/50">
+                    Capability Schema {i + 1}
+                  </span>
+                </div>
                 <h3 className="font-space-grotesk text-lg font-bold text-cobalt-blue">
                   {cap.title}
                 </h3>
@@ -107,6 +114,14 @@ export default function Home() {
                 className="bg-slate-white border border-slate-200/60 p-10 rounded-sm shadow-sm hover:border-cobalt-blue/40 transition-colors flex flex-col justify-between"
               >
                 <div>
+                  {/* Clean Blueprint-Style Blank Image/Video Placeholder Frame */}
+                  <div className="w-full aspect-[16/10] bg-blueprint-grey/50 border border-dashed border-slate-200 rounded-sm mb-6 flex items-center justify-center relative overflow-hidden select-none">
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:20px_20px]" />
+                    <span className="font-space-grotesk text-[10px] uppercase tracking-widest text-steel-slate/30 font-bold border border-slate-200/60 px-3.5 py-2 bg-slate-50/50">
+                      Featured Project Frame {i + 1}
+                    </span>
+                  </div>
+
                   <span className="font-space-grotesk text-xs font-bold text-cobalt-blue mb-4 block">
                     {project.metric}
                   </span>
@@ -145,12 +160,22 @@ export default function Home() {
             {testimonials.map((t, i) => (
               <div 
                 key={i} 
-                className="border border-slate-200 bg-slate-white p-10 rounded-sm shadow-sm flex flex-col justify-between"
+                className="border border-slate-200 bg-slate-white p-10 rounded-sm shadow-sm flex flex-col justify-between hover:border-cobalt-blue/30 transition-colors"
               >
-                <p className="font-sans text-base md:text-lg italic leading-relaxed text-steel-slate mb-8">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
                 <div>
+                  <div className="flex justify-between items-center mb-8">
+                    <div className="flex gap-1.5 text-cobalt-blue text-2xl tracking-widest select-none">
+                      ★ ★ ★ ★ ★
+                    </div>
+                    <span className="font-space-grotesk text-[10px] text-cobalt-blue/50 font-bold uppercase tracking-widest">
+                      Verified Review
+                    </span>
+                  </div>
+                  <p className="font-sans text-base md:text-lg italic leading-relaxed text-steel-slate mb-8">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                </div>
+                <div className="border-t border-slate-100 pt-6">
                   <h4 className="font-space-grotesk text-base font-bold text-slate-900">
                     {t.author}
                   </h4>

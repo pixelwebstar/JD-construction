@@ -100,32 +100,51 @@ export default function AboutPage() {
             <span className="font-space-grotesk text-xs font-semibold uppercase tracking-widest text-cobalt-blue/70 mb-2 block">
               Leadership Team
             </span>
-            <h2 className="font-space-grotesk text-3xl md:text-5xl font-bold tracking-tight text-slate-900">
-              The Minds Behind Our Structures
+            <h2 className="font-space-grotesk text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">
+              Structural Leadership Team
             </h2>
+            <p className="font-sans text-base md:text-lg leading-relaxed text-steel-slate">
+              Our executive operations and engineering directors lead with a unified philosophy: absolute compliance, zero tolerance for materials defects, and direct transparency throughout construction execution.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {team.map((member, i) => (
-              <div
-                key={i}
-                className="bg-slate-white border border-slate-200/60 p-10 rounded-sm shadow-sm relative flex flex-col justify-between"
-              >
-                <div>
-                  <span className="font-space-grotesk text-xs font-bold text-cobalt-blue mb-4 block">
-                    {member.role}
-                  </span>
-                  <h3 className="font-space-grotesk text-xl font-bold text-slate-900 mb-4">
-                    {member.name}
-                  </h3>
-                  <p className="font-sans text-sm md:text-base text-steel-slate leading-relaxed">
-                    {member.bio}
-                  </p>
+            {team.map((member, i) => {
+              return (
+                <div
+                  key={i}
+                  className="bg-slate-white border border-slate-200/60 p-8 rounded-sm shadow-sm relative flex flex-col justify-between hover:border-cobalt-blue/20 transition-all duration-300"
+                >
+                  <div>
+                    {/* Perfectly Straight Premium CSS Polaroid Photo Frame */}
+                    <div className="bg-slate-50 border border-slate-200 p-4 pb-8 rounded-sm shadow-sm mb-6 select-none hover:scale-[1.02] transition-transform duration-300">
+                      {/* Square Photo slot */}
+                      <div className="w-full aspect-square bg-blueprint-grey/50 border border-dashed border-slate-300 rounded-sm relative overflow-hidden flex items-center justify-center">
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:16px_16px]" />
+                        <span className="font-space-grotesk text-[8px] uppercase tracking-widest text-steel-slate/30 font-bold border border-slate-200/50 px-2 py-1 bg-slate-50/50">
+                          Polaroid Slot
+                        </span>
+                      </div>
+                      {/* Caption */}
+                      <div className="mt-4 text-center">
+                        <p className="font-space-grotesk text-xs uppercase tracking-widest text-slate-800 font-bold">
+                          {member.name}
+                        </p>
+                      </div>
+                    </div>
+
+                    <span className="font-space-grotesk text-[10px] font-bold text-cobalt-blue mb-1 block uppercase tracking-wider">
+                      {member.role}
+                    </span>
+                    <p className="font-sans text-xs md:text-sm text-steel-slate leading-relaxed">
+                      {member.bio}
+                    </p>
+                  </div>
+                  {/* Thin Steel Detail Rule */}
+                  <div className="w-full h-px bg-slate-200 mt-6" />
                 </div>
-                {/* Thin Steel Detail Rule */}
-                <div className="w-full h-px bg-slate-200 mt-8" />
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -142,15 +161,25 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+          {/* Sleek, High-End Minimalist Column-Border Architectural Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((val, i) => (
-              <div key={i} className="flex flex-col gap-4">
-                <h3 className="font-space-grotesk text-lg font-bold text-cobalt-blue">
-                  {val.title}
-                </h3>
-                <p className="font-sans text-base md:text-lg leading-relaxed text-steel-slate">
-                  {val.desc}
-                </p>
+              <div
+                key={i}
+                className="flex flex-col justify-between p-8 border-l border-slate-200 hover:border-cobalt-blue transition-colors duration-300 group min-h-[220px]"
+              >
+                <div>
+                  {/* Technical Bold Index */}
+                  <span className="font-space-grotesk text-3xl font-extrabold text-cobalt-blue mb-6 block">
+                    0{i + 1}
+                  </span>
+                  <h3 className="font-space-grotesk text-xl font-bold text-slate-900 mb-3 group-hover:text-cobalt-blue transition-colors">
+                    {val.title.split("/ ")[1]}
+                  </h3>
+                  <p className="font-sans text-xs md:text-sm leading-relaxed text-steel-slate">
+                    {val.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

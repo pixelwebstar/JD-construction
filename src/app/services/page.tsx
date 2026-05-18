@@ -6,22 +6,22 @@ export default function ServicesPage() {
     {
       code: "01 /",
       title: "Structural Engineering",
-      desc: "Full load-bearing calculation, seismic-resistant engineering, structural steel framing design, and commercial foundation engineering. We deliver blueprints designed for extreme durability.",
+      desc: "We provide certified structural designs, precise load calculations, seismic analysis, and steel framing blueprints signed by professional engineers.",
     },
     {
       code: "02 /",
       title: "Commercial Contracting",
-      desc: "End-to-end site management, excavation, concrete erection, steel structural assembly, and compliance inspections. We handle heavy industrial construction with precise project control.",
+      desc: "We manage full-scale commercial projects, from site preparation and concrete foundations to structural assembly and final compliance.",
     },
     {
       code: "03 /",
       title: "Code Audits & Inspections",
-      desc: "Complete load-capacity audits, compliance certifications, seismic hazard checks, and structural safety documentation for commercial properties, warehouses, and logistic hubs.",
+      desc: "We audit commercial buildings to certify load-bearing capacity, verify safety compliance, and provide official engineering reports for warehouses and facilities.",
     },
     {
       code: "04 /",
       title: "Structural Modifications",
-      desc: "Professional heavy-load column reinforcement, layout expansion structural support, and solid steel structural retrofitting to support heavy manufacturing machinery installation.",
+      desc: "We reinforce structural columns, modify foundations, and retrofit steel frames to support heavy industrial machinery and facility expansions.",
     },
   ];
 
@@ -48,7 +48,7 @@ export default function ServicesPage() {
               Core Capabilities
             </span>
             <h2 className="font-space-grotesk text-3xl md:text-5xl font-bold tracking-tight text-slate-900">
-              High-Performance Building Solutions
+              Contracting & Engineering Services
             </h2>
           </div>
 
@@ -59,6 +59,14 @@ export default function ServicesPage() {
                 className="border border-slate-200 p-10 rounded-sm shadow-sm bg-slate-white hover:border-cobalt-blue/50 transition-colors flex flex-col justify-between"
               >
                 <div>
+                  {/* Clean Blueprint-Style Blank Image/Video Placeholder Frame */}
+                  <div className="w-full aspect-[16/9] bg-blueprint-grey/50 border border-dashed border-slate-200 rounded-sm mb-8 flex items-center justify-center relative overflow-hidden select-none">
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:20px_20px]" />
+                    <span className="font-space-grotesk text-[10px] uppercase tracking-widest text-steel-slate/30 font-bold border border-slate-200/60 px-3.5 py-2 bg-slate-50/50">
+                      Service Layout Frame {service.code.split(" ")[0]}
+                    </span>
+                  </div>
+
                   <span className="font-space-grotesk text-xl font-bold text-cobalt-blue mb-4 block">
                     {service.code}
                   </span>
@@ -86,14 +94,14 @@ export default function ServicesPage() {
               Deep Dive
             </span>
             <h2 className="font-space-grotesk text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8">
-              Elite Blueprint & Load Auditing
+              Licensed Engineering & Load Calculations
             </h2>
             <div className="font-sans text-base md:text-lg leading-relaxed text-steel-slate flex flex-col gap-6">
               <p>
-                Every column, beam, and slab we erect is backed by strict static and dynamic load calculation reports. We analyze shear forces, bend margins, and structural foundations under maximum pressure tolerances.
+                We back every column, beam, and foundation we erect with certified load calculation reports. Our team analyzes shear forces and structure capacity to ensure absolute compliance with municipal guidelines.
               </p>
               <p>
-                Whether retrofitting a factory to install heavy 100-ton CNC machinery or certifying an old warehouse to meet updated seismic codes, JD Construction applies premium business-professional engineering software and state-certified field auditing tools to guarantee safety.
+                Whether you need to reinforce foundations for heavy industrial machinery or certify an existing warehouse to pass seismic codes, we use certified software and field auditing tools to deliver structural reports.
               </p>
             </div>
           </div>
@@ -120,14 +128,67 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* New Section: Standard Engineering Deliverables (Full Screen) */}
+      <section className="bg-slate-white min-h-screen flex flex-col justify-center border-b border-slate-200/80">
+        <div className="max-w-screen-2xl mx-auto w-full px-12 md:px-20 py-16 md:py-24">
+          <div className="flex flex-col items-start mb-16">
+            <span className="font-space-grotesk text-xs font-semibold uppercase tracking-widest text-cobalt-blue/70 mb-2 block">
+              Certified Output
+            </span>
+            <h2 className="font-space-grotesk text-3xl md:text-5xl font-bold tracking-tight text-slate-900">
+              Project Handover Packages
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="border border-slate-200 p-8 rounded-sm bg-blueprint-grey/15 hover:border-cobalt-blue/30 transition-colors flex flex-col justify-between">
+              <div>
+                <span className="font-space-grotesk text-xs font-bold text-cobalt-blue mb-4 block">01 /</span>
+                <h3 className="font-space-grotesk text-lg font-bold text-slate-900 mb-3">Sealed Blueprints</h3>
+                <p className="font-sans text-xs md:text-sm text-steel-slate leading-relaxed">
+                  Full sets of stamped architectural schematics and detailed CAD models ready for immediate municipal zoning submissions.
+                </p>
+              </div>
+            </div>
+            <div className="border border-slate-200 p-8 rounded-sm bg-blueprint-grey/15 hover:border-cobalt-blue/30 transition-colors flex flex-col justify-between">
+              <div>
+                <span className="font-space-grotesk text-xs font-bold text-cobalt-blue mb-4 block">02 /</span>
+                <h3 className="font-space-grotesk text-lg font-bold text-slate-900 mb-3">Load Calculations Ledger</h3>
+                <p className="font-sans text-xs md:text-sm text-steel-slate leading-relaxed">
+                  Comprehensive engineering reports highlighting soil pressure calculations, dead load weights, and seismic shear values.
+                </p>
+              </div>
+            </div>
+            <div className="border border-slate-200 p-8 rounded-sm bg-blueprint-grey/15 hover:border-cobalt-blue/30 transition-colors flex flex-col justify-between">
+              <div>
+                <span className="font-space-grotesk text-xs font-bold text-cobalt-blue mb-4 block">03 /</span>
+                <h3 className="font-space-grotesk text-lg font-bold text-slate-900 mb-3">Foundation Pour Logs</h3>
+                <p className="font-sans text-xs md:text-sm text-steel-slate leading-relaxed">
+                  Compaction reports, rebar grid layouts validation, and concrete PSI curing logs to prove absolute foundation depth standards.
+                </p>
+              </div>
+            </div>
+            <div className="border border-slate-200 p-8 rounded-sm bg-blueprint-grey/15 hover:border-cobalt-blue/30 transition-colors flex flex-col justify-between">
+              <div>
+                <span className="font-space-grotesk text-xs font-bold text-cobalt-blue mb-4 block">04 /</span>
+                <h3 className="font-space-grotesk text-lg font-bold text-slate-900 mb-3">Welding Certifications</h3>
+                <p className="font-sans text-xs md:text-sm text-steel-slate leading-relaxed">
+                  Third-party non-destructive welding checkups (ultrasonic tests) certifying structural frame joints per standard guidelines.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section 3: Call to Action (Full Screen) */}
-      <section className="bg-slate-white min-h-screen flex flex-col justify-center text-center">
+      <section className="bg-blueprint-grey min-h-screen flex flex-col justify-center text-center">
         <div className="max-w-4xl mx-auto px-6 py-16 md:py-24">
           <span className="font-space-grotesk text-xs font-semibold uppercase tracking-widest text-cobalt-blue/70 mb-2 block">
-            Custom Consultation
+            Direct Line
           </span>
           <h2 className="font-space-grotesk text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8">
-            Need a Professional Structural Code Inspection or Quote?
+            Need a Professional Structural Code Inspection or Estimate?
           </h2>
           <p className="font-sans text-base md:text-lg leading-relaxed text-steel-slate mb-10 max-w-2xl mx-auto">
             Contact us today to review your existing blueprint drawings, schedule an onsite code compliance check, or get a contracting estimate.
@@ -141,7 +202,7 @@ export default function ServicesPage() {
             </Link>
             <a 
               href="tel:+15550199" 
-              className="inline-block bg-blueprint-grey border border-slate-300 text-cobalt-blue font-space-grotesk text-sm font-bold tracking-wide uppercase px-10 py-5 hover:bg-slate-200 transition-colors rounded-sm"
+              className="inline-block bg-slate-white border border-slate-300 text-cobalt-blue font-space-grotesk text-sm font-bold tracking-wide uppercase px-10 py-5 hover:bg-slate-100 transition-colors rounded-sm"
             >
               Call Direct: +1 (555) 0199
             </a>
