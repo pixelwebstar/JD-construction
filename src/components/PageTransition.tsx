@@ -8,11 +8,10 @@ export default function PageTransition({ children }: { children: React.ReactNode
   const [displayChildren, setDisplayChildren] = useState(children);
   const [transitionStage, setTransitionStage] = useState("stage-active");
   const [prevPath, setPrevPath] = useState(pathname);
-  const [rotation, setRotation] = useState(0);
+  const [direction, setDirection] = useState<"forward" | "backward">("forward");
 
   useEffect(() => {
     if (pathname !== prevPath) {
-      // Symmetrical Left-to-Right circular page layout representing the structural wheel
       const PATH_ORDER = ["/about", "/services", "/", "/projects", "/contact"];
       const prevIdx = PATH_ORDER.indexOf(prevPath);
       const currIdx = PATH_ORDER.indexOf(pathname);
@@ -20,61 +19,57 @@ export default function PageTransition({ children }: { children: React.ReactNode
       const validPrevIdx = prevIdx !== -1 ? prevIdx : 2;
       const validCurrIdx = currIdx !== -1 ? currIdx : 2;
       
-      // Calculate index step difference to determine exact number and direction of spins
-      const diff = validCurrIdx - validPrevIdx;
-      const spinDegrees = diff * 360;
-      
-      setRotation(spinDegrees);
+      // Symmetrical scroll direction: forward goes down (content slides up), backward goes up (content slides down)
+      const isForward = validCurrIdx >= validPrevIdx;
+      setDirection(isForward ? "forward" : "backward");
       setTransitionStage("stage-slide-out");
 
       const timer = setTimeout(() => {
         setDisplayChildren(children);
         window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
         
-        // Prepare the incoming page with reversed rotation to spin back to active state
-        setRotation(-spinDegrees);
         setTransitionStage("stage-slide-in");
         
         const nextTimer = setTimeout(() => {
-          setRotation(0);
           setTransitionStage("stage-active");
-        }, 50);
+        }, 30);
         
         setPrevPath(pathname);
         return () => clearTimeout(nextTimer);
-      }, 550); // Comfortable duration for premium multi-spin transitions
+      }, 120); // Snappy exit transition buffer (120ms)
 
       return () => clearTimeout(timer);
     }
   }, [pathname, children, prevPath]);
 
-  // Dynamic inline styling for performance-optimized GPU-accelerated 2D rotating wheel transition
+  // Dynamic inline styling for a frictionless, ultra-fast vertical scroll transition
   let style: React.CSSProperties = {
-    transform: "rotate(0deg) scale(1)",
+    transform: "translateY(0px)",
     opacity: 1,
-    transformOrigin: "center center",
   };
   
   if (transitionStage === "stage-slide-out") {
+    // Exit page slides out of view snappily (forward = slides up, backward = slides down)
+    const translateVal = direction === "forward" ? "-15vh" : "15vh";
     style = {
-      transform: `rotate(${rotation}deg) scale(0.85)`,
+      transform: `translateY(${translateVal})`,
       opacity: 0,
-      transformOrigin: "center center",
-      transition: "transform 0.55s cubic-bezier(0.34, 1.45, 0.64, 1), opacity 0.4s ease-in-out",
+      transition: "transform 0.15s cubic-bezier(0.3, 0.0, 0.2, 1), opacity 0.12s ease-in-out",
     };
   } else if (transitionStage === "stage-slide-in") {
+    // Incoming page starts off-screen (forward = starts at bottom, backward = starts at top)
+    const translateVal = direction === "forward" ? "15vh" : "-15vh";
     style = {
-      transform: `rotate(${rotation}deg) scale(0.85)`,
+      transform: `translateY(${translateVal})`,
       opacity: 0,
-      transformOrigin: "center center",
       transition: "none",
     };
   } else if (transitionStage === "stage-active") {
+    // Incoming page settles perfectly to 0
     style = {
-      transform: "rotate(0deg) scale(1)",
+      transform: "translateY(0px)",
       opacity: 1,
-      transformOrigin: "center center",
-      transition: "transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.55s ease-out",
+      transition: "transform 0.22s cubic-bezier(0.0, 0.0, 0.2, 1), opacity 0.18s ease-out",
     };
   }
 
