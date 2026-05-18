@@ -7,10 +7,10 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/contact" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
+    { name: "Projects", href: "/projects" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -26,14 +26,14 @@ export default function Header() {
       {/* Desktop Navigation (5-Column Symmetrical Grid Layout) */}
       <div className="hidden md:grid grid-cols-5 items-center justify-items-center text-center max-w-screen-2xl mx-auto px-12 md:px-20 h-20">
 
-        {/* Column 1: Projects */}
-        <Link href="/projects" className={linkClass("/projects")}>
-          Projects
+        {/* Column 1: About */}
+        <Link href="/about" className={linkClass("/about")}>
+          About
         </Link>
 
-        {/* Column 2: Contact */}
-        <Link href="/contact" className={linkClass("/contact")}>
-          Contact
+        {/* Column 2: Services */}
+        <Link href="/services" className={linkClass("/services")}>
+          Services
         </Link>
 
         {/* Column 3: Center Brand Logo */}
@@ -46,14 +46,14 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Column 4: About */}
-        <Link href="/about" className={linkClass("/about")}>
-          About
+        {/* Column 4: Projects */}
+        <Link href="/projects" className={linkClass("/projects")}>
+          Projects
         </Link>
 
-        {/* Column 5: Services */}
-        <Link href="/services" className={linkClass("/services")}>
-          Services
+        {/* Column 5: Contact */}
+        <Link href="/contact" className={linkClass("/contact")}>
+          Contact
         </Link>
       </div>
 

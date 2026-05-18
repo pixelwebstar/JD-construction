@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import BackgroundVideo from "@/components/BackgroundVideo";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -34,21 +35,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans bg-slate-white text-steel-slate">
         <Header />
 
-        {/* Persistent Video Layout Wrapper */}
+        {/* Optimized Conditional Background Video */}
         <div className="relative flex-grow flex flex-col w-full">
-          {/* Absolute Background Video: Rendered once, never unmounted on page changes */}
-          <div className="absolute top-0 left-0 w-full h-viewport overflow-hidden pointer-events-none z-0 bg-slate-950">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              className="w-full h-full object-cover transform-gpu will-change-transform"
-            >
-              <source src="/hero-bg.webm" type="video/webm" />
-            </video>
-          </div>
+          <BackgroundVideo />
 
           {/* Main Content: Rendered on top of the video container */}
           <main className="flex-grow flex flex-col w-full relative z-10">

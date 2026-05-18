@@ -7,8 +7,14 @@ interface HeroBannerProps {
 
 export default function HeroBanner({ title, description }: HeroBannerProps) {
   return (
-    <section className="relative w-full min-h-viewport flex flex-col justify-end bg-transparent overflow-hidden">
-      {/* Content — bottom-left anchored. The video is persistently rendered inside layout.tsx */}
+    <section className="relative w-full min-h-viewport flex flex-col justify-end bg-[#071324] overflow-hidden">
+      {/* Blueprint grid overlay for architectural detailing */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+      
+      {/* Soft Vignette Overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,transparent_0%,rgba(7,19,36,0.8)_85%)] pointer-events-none z-0" />
+
+      {/* Content — bottom-left anchored */}
       <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-8 md:px-16 lg:px-20 pb-16 md:pb-20 lg:pb-24">
 
         {/* Localized text shadow — left-to-right linear gradient hug behind the text area */}
