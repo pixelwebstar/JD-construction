@@ -44,7 +44,7 @@ export default function AboutPage() {
       />
 
       {/* Section 1: Company Story (Full Screen) */}
-      <section className="bg-slate-white min-h-screen flex flex-col justify-center border-b border-slate-200/80">
+      <section className="bg-slate-white min-h-viewport flex flex-col justify-center border-b border-slate-200/80">
         <div className="max-w-screen-2xl mx-auto w-full px-12 md:px-20 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-7 flex flex-col items-start">
             <span className="font-space-grotesk text-xs font-semibold uppercase tracking-widest text-cobalt-blue/70 mb-2 block">
@@ -94,7 +94,7 @@ export default function AboutPage() {
       </section>
 
       {/* Section 2: Faces Behind the Company (Full Screen) */}
-      <section id="team-section" className="bg-blueprint-grey min-h-screen flex flex-col justify-center border-b border-slate-200/80">
+      <section id="team-section" className="bg-blueprint-grey min-h-viewport flex flex-col justify-center border-b border-slate-200/80">
         <div className="max-w-screen-2xl mx-auto w-full px-12 md:px-20 py-16 md:py-24">
           <div className="flex flex-col items-start mb-16">
             <span className="font-space-grotesk text-xs font-semibold uppercase tracking-widest text-cobalt-blue/70 mb-2 block">
@@ -150,7 +150,7 @@ export default function AboutPage() {
       </section>
 
       {/* Section 3: What We Stand For (Full Screen) */}
-      <section className="bg-slate-white min-h-screen flex flex-col justify-center border-b border-slate-200/80">
+      <section className="bg-slate-white min-h-viewport flex flex-col justify-center border-b border-slate-200/80">
         <div className="max-w-screen-2xl mx-auto w-full px-12 md:px-20 py-16 md:py-24">
           <div className="flex flex-col items-start mb-16">
             <span className="font-space-grotesk text-xs font-semibold uppercase tracking-widest text-cobalt-blue/70 mb-2 block">

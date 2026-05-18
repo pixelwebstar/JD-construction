@@ -7,13 +7,13 @@ interface HeroBannerProps {
 
 export default function HeroBanner({ title, description }: HeroBannerProps) {
   return (
-    <section className="relative w-full min-h-[calc(100vh-80px)] flex flex-col justify-end bg-transparent overflow-hidden">
+    <section className="relative w-full min-h-viewport flex flex-col justify-end bg-transparent overflow-hidden">
       {/* Content — bottom-left anchored. The video is persistently rendered inside layout.tsx */}
       <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-8 md:px-16 lg:px-20 pb-16 md:pb-20 lg:pb-24">
 
         {/* Localized text shadow — left-to-right linear gradient hug behind the text area */}
         <div
-          className="relative py-8 px-6 md:py-10 md:px-10 -ml-6 md:-ml-10 w-fit max-w-3xl"
+          className="relative py-8 px-6 md:py-10 md:px-10 -ml-6 md:-ml-10 w-fit max-w-3xl animate-fade-in-up"
           style={{
             background: "linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, transparent 100%)",
           }}

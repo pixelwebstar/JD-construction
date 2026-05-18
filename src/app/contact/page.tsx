@@ -24,7 +24,7 @@ export default function ContactPage() {
       />
 
       {/* Section 1: Dial up side and contact form (Full Screen) */}
-      <section id="contact-section" className="bg-slate-white min-h-screen flex flex-col justify-center border-b border-slate-200/80">
+      <section id="contact-section" className="bg-slate-white min-h-viewport flex flex-col justify-center border-b border-slate-200/80">
         <div className="max-w-screen-2xl mx-auto w-full px-12 md:px-20 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Left Side: Contact Information & Direct Lines */}

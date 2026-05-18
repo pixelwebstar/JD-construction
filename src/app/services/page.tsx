@@ -41,7 +41,7 @@ export default function ServicesPage() {
       />
 
       {/* Section 1: All the Services (Full Screen) */}
-      <section className="bg-slate-white min-h-screen flex flex-col justify-center border-b border-slate-200/80">
+      <section className="bg-slate-white min-h-viewport flex flex-col justify-center border-b border-slate-200/80">
         <div className="max-w-screen-2xl mx-auto w-full px-12 md:px-20 py-16 md:py-24">
           <div className="flex flex-col items-start mb-16">
             <span className="font-space-grotesk text-xs font-semibold uppercase tracking-widest text-cobalt-blue/70 mb-2 block">
@@ -86,7 +86,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Section 2: Detailed Service Showcase (Full Screen) */}
-      <section className="bg-blueprint-grey min-h-screen flex flex-col justify-center border-b border-slate-200/80">
+      <section className="bg-blueprint-grey min-h-viewport flex flex-col justify-center border-b border-slate-200/80">
         <div className="max-w-screen-2xl mx-auto w-full px-12 md:px-20 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           <div className="lg:col-span-6 flex flex-col items-start">
@@ -129,7 +129,7 @@ export default function ServicesPage() {
       </section>
 
       {/* New Section: Standard Engineering Deliverables (Full Screen) */}
-      <section className="bg-slate-white min-h-screen flex flex-col justify-center border-b border-slate-200/80">
+      <section className="bg-slate-white min-h-viewport flex flex-col justify-center border-b border-slate-200/80">
         <div className="max-w-screen-2xl mx-auto w-full px-12 md:px-20 py-16 md:py-24">
           <div className="flex flex-col items-start mb-16">
             <span className="font-space-grotesk text-xs font-semibold uppercase tracking-widest text-cobalt-blue/70 mb-2 block">
@@ -182,15 +182,15 @@ export default function ServicesPage() {
       </section>
 
       {/* Section 3: Call to Action (Full Screen) */}
-      <section className="bg-blueprint-grey min-h-screen flex flex-col justify-center text-center">
-        <div className="max-w-4xl mx-auto px-6 py-16 md:py-24">
+      <section className="bg-blueprint-grey min-h-viewport flex flex-col justify-center text-center">
+        <div className="max-w-4xl mx-auto px-6 py-8 md:py-24">
           <span className="font-space-grotesk text-xs font-semibold uppercase tracking-widest text-cobalt-blue/70 mb-2 block">
             Direct Line
           </span>
-          <h2 className="font-space-grotesk text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8">
+          <h2 className="font-space-grotesk text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4 md:mb-8">
             Need a Professional Structural Code Inspection or Estimate?
           </h2>
-          <p className="font-sans text-base md:text-lg leading-relaxed text-steel-slate mb-10 max-w-2xl mx-auto">
+          <p className="font-sans text-base md:text-lg leading-relaxed text-steel-slate mb-6 md:mb-10 max-w-2xl mx-auto">
             Contact us today to review your existing blueprint drawings, schedule an onsite code compliance check, or get a contracting estimate.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">

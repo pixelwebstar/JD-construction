@@ -64,9 +64,9 @@ export default function Header() {
           {/* Left Action: Email Direct */}
           <a
             href="mailto:info@jdconstruction.com"
-            className="text-xs font-bold text-steel-slate hover:text-cobalt-blue flex items-center gap-1 select-none"
+            className="text-xs font-bold text-steel-slate hover:text-cobalt-blue select-none"
           >
-            ✉️ <span className="hidden min-[350px]:inline">Email</span>
+            <span>Email</span>
           </a>
 
           {/* Center: Brand Logo */}
@@ -82,9 +82,9 @@ export default function Header() {
           {/* Right Action: Call Us Direct */}
           <a
             href="tel:+15550199"
-            className="text-xs font-bold text-cobalt-blue hover:text-slate-900 flex items-center gap-1 select-none"
+            className="text-xs font-bold text-cobalt-blue hover:text-slate-900 select-none"
           >
-            📞 <span>Call Us</span>
+            <span>Call</span>
           </a>
         </div>
 
