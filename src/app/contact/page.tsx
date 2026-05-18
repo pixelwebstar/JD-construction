@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import HeroBanner from "@/components/HeroBanner";
 
 export default function ContactPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,12 +16,6 @@ export default function ContactPage() {
 
   return (
     <div className="w-full flex flex-col">
-      {/* Hero Banner (Full Viewport Height) */}
-      <HeroBanner
-        title="Let's Build Together"
-        description="Submit your blueprints, schedule a site audit, or call our managing director directly. We respond within 24 hours."
-      />
-
       {/* Section 1: Dial up side and contact form (Full Screen) */}
       <section id="contact-section" className="bg-slate-white min-h-viewport flex flex-col justify-center border-b border-slate-200/80">
         <div className="max-w-screen-2xl mx-auto w-full px-12 md:px-20 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-16">

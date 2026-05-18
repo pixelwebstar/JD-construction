@@ -34,28 +34,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans bg-slate-white text-steel-slate">
         <Header />
 
-        {/* Persistent Video Layout Wrapper */}
-        <div className="relative flex-grow flex flex-col w-full">
-          {/* Absolute Background Video: Rendered once, never unmounted on page changes */}
-          <div className="absolute top-0 left-0 w-full h-viewport overflow-hidden pointer-events-none z-0 bg-slate-950">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              poster="/hero-poster.jpg"
-              className="w-full h-full object-cover transform-gpu will-change-transform"
-            >
-              <source src="/hero-bg-optimized.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          {/* Main Content: Rendered on top of the video container */}
-          <main className="flex-grow flex flex-col w-full relative z-10">
-            <PageTransition>{children}</PageTransition>
-          </main>
-        </div>
+        <main className="flex-grow flex flex-col w-full relative">
+          <PageTransition>{children}</PageTransition>
+        </main>
 
         <Footer />
       </body>

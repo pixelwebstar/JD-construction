@@ -1,4 +1,3 @@
-import HeroBanner from "@/components/HeroBanner";
 import Link from "next/link";
 
 export default function AboutPage() {
@@ -37,12 +36,6 @@ export default function AboutPage() {
 
   return (
     <div className="w-full flex flex-col">
-      {/* Hero Banner (Full Viewport Height) */}
-      <HeroBanner
-        title="Built on Trust"
-        description="Twenty-five years of certified engineering, field directors, and absolute structural precision."
-      />
-
       {/* Section 1: Company Story (Full Screen) */}
       <section className="bg-slate-white min-h-viewport flex flex-col justify-center border-b border-slate-200/80">
         <div className="max-w-screen-2xl mx-auto w-full px-12 md:px-20 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">

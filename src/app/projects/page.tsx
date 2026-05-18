@@ -1,4 +1,3 @@
-import HeroBanner from "@/components/HeroBanner";
 import Link from "next/link";
 
 export default function ProjectsPage() {
@@ -46,12 +45,6 @@ export default function ProjectsPage() {
 
   return (
     <div className="w-full flex flex-col">
-      {/* Hero Banner (Full Viewport Height) */}
-      <HeroBanner
-        title="Built to Prove It"
-        description="Warehouses, office retrofits, foundry extensions — review our executed industrial works, completed on-time with zero code errors."
-      />
-
       {/* Section 1: Gallery of Work (Full Screen) */}
       <section id="projects-section" className="bg-slate-white min-h-viewport flex flex-col justify-center border-b border-slate-200/80">
         <div className="max-w-screen-2xl mx-auto w-full px-12 md:px-20 py-16 md:py-24">

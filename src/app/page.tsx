@@ -46,12 +46,28 @@ export default function Home() {
   ];
 
   return (
-    <div className="w-full flex flex-col">
-      {/* Hero Banner (Full Viewport Height by Default) */}
-      <HeroBanner
-        title="We Build What Lasts"
-        description="Structural steel erection, reinforced concrete foundations, seismic retrofitting, and full code compliance audits — delivered on time, on budget, with zero compromise."
-      />
+    <div className="w-full flex flex-col relative">
+      {/* Absolute Background Video: Only rendered on home page hero */}
+      <div className="absolute top-0 left-0 w-full h-viewport overflow-hidden pointer-events-none z-0 bg-slate-950">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster="/hero-poster.jpg"
+          className="w-full h-full object-cover transform-gpu will-change-transform"
+        >
+          <source src="/hero-bg-optimized.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div className="relative z-10 w-full flex flex-col">
+        {/* Hero Banner (Full Viewport Height by Default) */}
+        <HeroBanner
+          title="We Build What Lasts"
+          description="Structural steel erection, reinforced concrete foundations, seismic retrofitting, and full code compliance audits — delivered on time, on budget, with zero compromise."
+        />
 
       {/* Section 1: What We Do (Full Screen) */}
       <section className="bg-slate-white min-h-viewport flex flex-col justify-center border-b border-slate-200/80">
@@ -217,6 +233,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }
